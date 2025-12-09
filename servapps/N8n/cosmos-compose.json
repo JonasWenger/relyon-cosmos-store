@@ -16,7 +16,7 @@
         {
         "name": "n8nrunner",
         "label": "Deploy n8n Runner",
-        "initialValue": true,
+        "initialValue": false,
         "type": "checkbox"
       }
      ]
