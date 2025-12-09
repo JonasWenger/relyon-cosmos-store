@@ -6,6 +6,12 @@
         "label": "Where are youre Templates (leave empty to not mount anything)",
         "initialValue": "/var/lib/docker/volumes/n8n-custom-nodes/_data",
         "type": "text"
+      },
+             {
+        "name": "smtpPassword",
+        "label": "password for the SMTP relay",
+        "initialValue": "password",
+        "type": "text"
       }
      ]
   },
@@ -25,7 +31,17 @@
         "GENERIC_TIMEZONE=Europe/Berlin",
         "NODE_ENV=production",
         "N8N_RELEASE_TYPE=stable",
-        "WEBHOOK_URL=https://{Hostnames.{StaticServiceName}.{StaticServiceName}.host}"
+        "WEBHOOK_URL=https://{Hostnames.{StaticServiceName}.{StaticServiceName}.host}",
+        "N8N_EMAIL_MODE=smtp",
+        "N8N_SMTP_HOST=smtp.office365.com",
+        "N8N_SMTP_PORT=587",
+        "N8N_SMTP_USER=smtp.relay@relyon.de",
+        "N8N_SMTP_PASS={Context.smtpPassword}",
+        "N8N_SMTP_SENDER=N8N - {ServiceName} <smtp.relay@relyon.de>",
+        "N8N_SMTP_STARTTLS=true",
+        "N8N_SMTP_SSL=false",
+        "N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true",
+        "N8N_RUNNERS_ENABLED=false"
       ],
       "labels": {
         "cosmos-persistent-env": "DB_POSTGRESDB_PORT, DB_POSTGRESDB_PORT, DB_POSTGRESDB_DATABASE, DB_POSTGRESDB_USER, DB_POSTGRESDB_PASSWORD",
