@@ -108,7 +108,7 @@
       "networks": {
         "{ServiceName}-postgres": {}
       }
-    }
+    },
     {/if}
     "{ServiceName}-postgres": {
       "image": "postgres:15-alpine",
