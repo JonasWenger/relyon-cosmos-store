@@ -127,7 +127,6 @@
       ]
     }
   },
-
       {if Context.n8nrunner}
     , {ServiceName}-runners:
     image: n8nio/runners
@@ -137,7 +136,6 @@
       - N8N_RUNNERS_AUTH_TOKEN={Passwords.1}
     depends_on:
       - {ServiceName}
-},
           {/if}
 
   "networks": {
