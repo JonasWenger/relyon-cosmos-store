@@ -128,15 +128,15 @@
     }
   },
       {if Context.n8nrunner}
-    , {ServiceName}-runners:
-    image: n8nio/runners
-    container_name: {ServiceName}-runners
+    , "{ServiceName}-runners":
+    "image": "n8nio/runners"
+    "container_name": "{ServiceName}-runners"
  "environment": [
-      "N8N_RUNNERS_TASK_BROKER_URI=http://{ServiceName}:5678"
+      "N8N_RUNNERS_TASK_BROKER_URI=http://{ServiceName}:5678",
       "N8N_RUNNERS_AUTH_TOKEN={Passwords.1}"
  ]
-    depends_on:
-      - {ServiceName}
+    "depends_on":
+      "{ServiceName}"
           {/if}
 
   "networks": {
