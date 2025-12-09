@@ -16,7 +16,7 @@
         {
         "name": "n8nrunner",
         "label": "Deploy n8n Runner",
-        "initialValue": false,
+        "initialValue": true,
         "type": "checkbox"
       }
      ]
@@ -101,9 +101,6 @@
       "environment": [
         "N8N_RUNNERS_TASK_BROKER_URI=http://{ServiceName}:5678",
         "N8N_RUNNERS_AUTH_TOKEN={Passwords.1}"
-      ],
-      "depends_on": [
-        "{ServiceName}"
       ],
       "networks": {
         "{ServiceName}-postgres": {}
