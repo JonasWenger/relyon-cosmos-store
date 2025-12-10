@@ -55,7 +55,8 @@
         "N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true",
         "N8N_RUNNERS_ENABLED={Context.n8nrunner}",
         "QUEUE_BULL_REDIS_HOST={ServiceName}-redis",
-        "QUEUE_BULL_REDIS_PORT=6379"
+        "QUEUE_BULL_REDIS_PORT=6379",
+        "EXECUTIONS_MODE=queue"
         {if Context.n8nrunner}
         , "N8N_RUNNERS_MODE=external",
         "N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0",
