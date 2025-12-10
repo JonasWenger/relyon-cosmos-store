@@ -166,7 +166,9 @@
       "labels": {
         "cosmos-persistent-env": "POSTGRES_DB,POSTGRES_USER,POSTGRES_PASSWORD",
         "cosmos-stack": "{ServiceName}",
-        "cosmos-stack-main": "{ServiceName}"
+        "cosmos-stack-main": "{ServiceName}",
+        "cosmos-auto-update": "true",
+        "cosmos-icon": "https://jonaswenger.github.io/relyon-cosmos-store/servapps/N8n/icon.png"
       }
     },
     {/if}
